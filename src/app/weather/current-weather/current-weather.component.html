@@ -1,0 +1,27 @@
+<ion-card color="success">
+  <ion-card-header>
+    <ion-card-title>Current Weather</ion-card-title>
+    <ion-card-subtitle>{{weatherCond()}}</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content class="weather-main">
+    <div class="temp">
+      {{temp()}}°C
+    </div>
+    <div class="temp">
+      {{wind_speed()}}km/h
+    </div>
+    <div class="location">
+      Location:{{ location()}}
+    </div>
+  </ion-card-content>
+
+  <ion-card-content>
+    <app-weather-icon [slug]="icon()" [size]="64" [style]="'fill'"></app-weather-icon>
+  </ion-card-content>
+
+</ion-card>
+
+<!-- <div class="chart-container">
+  <canvas baseChart [data]="lineChartData" [options]="lineChartOptions" type="line"></canvas>
+</div> -->

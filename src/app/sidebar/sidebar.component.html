@@ -1,0 +1,22 @@
+<ion-menu side="start" contentId="main-content" type="overlay">
+  <ion-header>
+    <ion-toolbar color="tertiary">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-menu-toggle>
+        <ion-item button routerLink="/home" routerLinkActive="selected" lines="none">
+          <i slot="start" class="fas fa-solid fa-house"></i>
+          <ion-label>Home</ion-label>
+        </ion-item>
+        <ion-item button routerLink="/about" routerLinkActive="selected" lines="none">
+          <i slot="start" class="fas fa-solid fa-house"></i>
+          <ion-label>About</ion-label>
+        </ion-item>
+
+      </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>

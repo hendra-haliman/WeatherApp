@@ -1,0 +1,31 @@
+<app-current-weather [location]="location" [temp]="weatherData?.current?.temperature"[wind_speed]="weatherData?.current?.wind_speed" [weatherCond]="getWeatherCondition(weatherData?.current?.weather_code).label" [icon]="getWeatherCondition(weatherData?.current?.weather_code, weatherData?.current?.cloud_cover, weatherData?.current?.is_day).icon"></app-current-weather>
+
+<div class="weekly-container">
+    @for (item of weeklyEntries; track $index) {
+    <ion-card color="medium" class="weekly-item clickable" (click)="onUpdateChartForDay(item[0])">
+      <ion-card-header>
+        <ion-card-title>{{item[0] | date:'d MMM'}}</ion-card-title>
+        <ion-card-subtitle>sub title</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content class="weather-main">
+        <div class="temp">
+          temp°C
+        </div>
+        <div class="location">
+          Location:
+        </div>
+      </ion-card-content>
+
+    </ion-card>
+    }
+</div>
+
+<div class="chart-container">
+  <canvas baseChart [data]="lineChartData" [options]="lineChartOptions" type="line"></canvas>
+  @if (isLoading) {
+    <div class="chart-loader">
+      <ion-spinner name="crescent"></ion-spinner>
+    </div>
+  }
+</div>

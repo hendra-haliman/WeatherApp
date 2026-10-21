@@ -1,0 +1,9 @@
+{
+  "appId": "com.example.testionic2",
+  "appName": "test-ionic2",
+  "webDir": "dist/test-ionic2/browser",
+  "bundledWebRuntime": false,
+  "assets": {
+    "assetDir": "assets"
+  }
+}

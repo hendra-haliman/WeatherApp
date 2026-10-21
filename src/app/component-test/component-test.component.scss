@@ -1,0 +1,17 @@
+::ng-deep .my-loading {
+  /* backdrop dimness */
+  --backdrop-opacity: 0.8;   // default ~0.5, increase for darker background
+  //--backdrop-color: rgba(0, 0, 0, 0.8); // adjust color if needed
+  --backdrop-color: rgba(25, 194, 123, 0.8);
+
+  .loading-wrapper {
+    transform: scale(1.5);   // enlarge spinner + text + box
+    padding: 2rem;
+    border-radius: 12px;
+  }
+}
+
+.mat-mdc-raised-button {
+  border-radius: 20px !important; // or whatever radius you prefer
+}
+

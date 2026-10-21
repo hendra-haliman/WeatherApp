@@ -1,0 +1,5 @@
+.selected {
+  font-weight: 600;
+  border-left: 3px solid var(--ion-color-primary);
+  --background: rgba(var(--ion-color-primary-rgb), 0.08);
+}

@@ -1,0 +1,8 @@
+<p>component-test works!</p>
+<button mat-raised-button type="button" [disabled]="isDisabled" (click)="onPromptDialog()">Prompt dialog</button>
+<button mat-flat-button type="button" [disabled]="isDisabled" (click)="onClick()">Click You</button>
+<mat-divider></mat-divider>
+<ion-button type="button" color="primary" expand="inline-block" (click)="onClick()">Click Me yah</ion-button>
+<ion-loading cssClass="my-loading" [isOpen]="isLoading" duration="3000" message="Loading"
+  spinner="lines" (didDismiss)="onLoadingDismissed()"></ion-loading>
+<p>Location: {{ city }} {{ lat }}, {{ lng }}</p>
