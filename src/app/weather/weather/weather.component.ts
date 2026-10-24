@@ -82,7 +82,7 @@ export class WeatherComponent {
     this.lng = pos.lng;
 
     // Start watching
-    this.watchId = await this.locationService.watchLocation((lat, lng) => {
+    this.watchId = await this.locationService.watchLocation((lat : number, lng : number) => {
       this.lat = lat;
       this.lng = lng;
     });
