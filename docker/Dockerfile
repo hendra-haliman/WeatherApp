@@ -1,7 +1,9 @@
-FROM node:18 AS build
+FROM node:20 AS build
 WORKDIR /app
+COPY package*.json ./
+RUN npm ci
 COPY . .
-RUN npm install && npm run build --prod
+RUN npm run build
 
 FROM nginx:alpine
-COPY --from=build /app/www /usr/share/nginx/html
+COPY --from=build /app/dist/test-ionic2 /usr/share/nginx/html
